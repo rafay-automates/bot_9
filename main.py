@@ -76,7 +76,7 @@ st.set_page_config(page_title="Domain Authority Checker", page_icon="🌐")
 st.title("🌐 Domain Authority / Page Authority Checker")
 st.markdown("Enter domains (one per line) to check DA / PA / Spam Score")
 
-user_input = st.text_area("Type Domain "")
+user_input = st.text_area("Type Domain ")
 
 if st.button("Check Authority"):
     domains = [d.strip() for d in user_input.splitlines() if d.strip()]
@@ -91,4 +91,5 @@ if st.button("Check Authority"):
     if results:
         st.success("Done ✅")
         st.dataframe(results, use_container_width=True)
+
 
